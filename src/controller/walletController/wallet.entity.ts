@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, Index,Generated, UpdateDateColumn, ManyToOne,OneToMany, DeleteDateColumn, OneToOne } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, Index,Generated, ManyToOne,OneToMany } from 'typeorm';
 import {User} from '../userController/user.entity';
 import { WalletTransaction } from './wallet.transaction.entity';
 
