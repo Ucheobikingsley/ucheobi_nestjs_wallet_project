@@ -4,7 +4,7 @@ import {Request} from 'express';
 
 import {User} from '../userController/user.entity';
 import { AuthGuard } from 'src/guards/auth.guard';
-import { UserRole } from 'src/typings/types';
+import { UserRole } from 'src/types/types';
 import { Roles } from 'src/decorators/roles.decorator';
 import { RolesGuard } from 'src/guards/roles.guard';
 @Controller('user/wallet')

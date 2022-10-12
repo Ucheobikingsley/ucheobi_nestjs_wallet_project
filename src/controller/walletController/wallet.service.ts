@@ -3,7 +3,7 @@ import { DataSource } from 'typeorm';
 import { Request } from 'express';
 import { Wallet } from './wallet.entity';
 import {User} from '../userController/user.entity';
-import { walletTransaction } from 'src/typings/types';
+import { walletTransaction } from 'src/types/types';
 import { WalletTransaction } from './wallet.transaction.entity';
 
 @Injectable()

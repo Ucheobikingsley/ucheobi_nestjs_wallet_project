@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, Index } from 'typeorm';
-import { walletTransaction } from 'src/typings/types';
+import { walletTransaction } from 'src/types/types';
 import { Wallet } from './wallet.entity';
 @Entity()
 export class WalletTransaction{

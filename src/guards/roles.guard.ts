@@ -1,7 +1,7 @@
 import { Injectable, CanActivate, ExecutionContext } from "@nestjs/common";
 import { Reflector } from "@nestjs/core";
 import { Observable } from "rxjs";
-import { UserRole } from "src/typings/types";
+import { UserRole } from "src/types/types";
 import { AuthGuard } from "./auth.guard";
 import {has} from 'lodash';
 
