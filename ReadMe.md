@@ -7,7 +7,7 @@ STEP 1
       - Edit the development.env to match your postgres configuration at './src/common/envs/development.env'
     * run "npm run start:dev" to start server
 STEP 2 - api documentation/routing
- Our service uses Bearer Token Authentication Model so each 
+ The services uses Bearer Token Authentication Model so each 
  endpoint requires a Bearer Token Authentication except the POST "http://localhost:3000/user" 
   - Register user
     entpoint: "http://localhost:3000/user"
