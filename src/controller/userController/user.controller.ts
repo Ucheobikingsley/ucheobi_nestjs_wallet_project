@@ -17,7 +17,7 @@ export class UserController {
   }
 
   @Post()
-    public async createUser(@Body() body: CreateUserDto): Promise<User> {
+    public async createUser(@Body() body: CreateUserDto): Promise<Record<string, unknown>> {
     const [dto, validationErrors] = await readValidatePostBody(CreateUserDto,body);
     if(validationErrors.length > 0){
       throw new HttpException(validationErrors, 400); 

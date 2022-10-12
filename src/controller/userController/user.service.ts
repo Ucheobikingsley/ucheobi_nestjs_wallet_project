@@ -21,9 +21,12 @@ export class UserService {
     return this.repository.findOne(id);
   }
 
-  public async createUser(body: CreateUserDto): Promise<User> {
+  public async createUser(body: CreateUserDto): Promise<Record<string, unknown>> {
     const user: User = new User();
-    
+    const findUser = await this.repository.findOne({where:{phonenumber:body.phonenumber}});
+    if(findUser){
+      throw new HttpException('phonenumber already exist', 400)
+    }
    //hash password with bcrypt
     const encryptedPasssword = await hash(body.password, Number(this.config.get<number>('SALT_ROUNDS')))
     if(!encryptedPasssword){
@@ -32,7 +35,9 @@ export class UserService {
     }
     const userData = merge(user, body)
     userData.password = encryptedPasssword;
-    return this.repository.save(user);
+
+    this.repository.save(user);
+    return {message:'User Created'};
   }
 
   public async login(request: Request){

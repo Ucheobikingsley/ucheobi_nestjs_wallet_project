@@ -7,7 +7,7 @@ STEP 1
     * run "npm run start:dev" to start server
 STEP 2 - api documentation/routing
  Our service uses Bearer Token Authentication Model so each 
- endpoint requires a Bearer Token Authentication except the POST "http://localhost:3000/user"
+ endpoint requires a Bearer Token Authentication except the POST "http://localhost:3000/user" 
   - Register user
     entpoint: "http://localhost:3000/user"
     method: "POST"
@@ -15,6 +15,7 @@ STEP 2 - api documentation/routing
     "name":"david bliss",
     "email":"db@gmail.com", 
     "password": "ucheobi", 
+    "isAdmin":false,
     "phonenumber":"090293212"
     }
   - Login

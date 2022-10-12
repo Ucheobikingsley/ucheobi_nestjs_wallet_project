@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany, Index } from 'typeorm';
 import { Wallet } from '../walletController/wallet.entity';
 
 @Entity()
@@ -17,6 +17,7 @@ export class User {
   public password!:string;
 
   @Column({ type: 'text', default: '', nullable: false})
+  @Index({ unique: true })
   public phonenumber!:string;
 
   @Column({ type: 'boolean', default: false, nullable: false})
